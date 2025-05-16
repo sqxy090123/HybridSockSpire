@@ -33,7 +33,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./target/release/HybridSockSpire.exe
-          asset_name: HybridSockSpire_win_${{ github.ref_name }}.exe
+          asset_name: HybridSockSpire_unix_${{ github.ref_name }}.exe
           asset_content_type: application/octet-stream
           
   unix_release:
