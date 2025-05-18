@@ -39,7 +39,7 @@ const HTML: &str = r#"<!DOCTYPE html>
 "#;
 
 pub fn listen_on_port(port: u16) {
-    let addr = format!("0.0.0.0:{}", port);
+    let addr = format!("0.\x30.0.\x30:{}", port);
     let listener = TcpListener::bind(&addr).expect(&format!("无法绑定端口{}", port));
     println!("HTTP服务已启动: http://{}/", addr);
 

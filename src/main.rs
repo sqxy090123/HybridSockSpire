@@ -9,12 +9,12 @@ mod win_lib;
 mod pre_win_lib;
 
 #[cfg(windows)]
-const VERSION: &str = "1.0.1.1";
+const VERSION: &str = "1.0.0.1+1";
 
 #[cfg(unix)]
-const VERSION: &str = "1.0.0.0";
+const VERSION: &str = "1.0.0.1";
 
-const DEBUG: bool = true;
+const DEBUG: bool = false;
 
 #[cfg(unix)]
 fn main() {
