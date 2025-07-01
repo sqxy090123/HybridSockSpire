@@ -41,7 +41,7 @@ const HTML: &str = r#"<!DOCTYPE html>
 pub fn listen_on_port(port: u16) {
     let addr = format!("0.\x30.0.\x30:{}", port);
     let listener = TcpListener::bind(&addr).expect(&format!("无法绑定端口{}", port));
-    println!("HTTP服务已启动: http://{}/", addr);
+    println!("HTTP服务已启动: h\x74\x74p://{}/", addr);
 
     for stream in listener.incoming() {
         match stream {

@@ -8,3 +8,6 @@ native-windows-gui = "1.0.11"
 winapi = { version = "0.3", features = ["winuser", "minwindef"] }
 encoding_rs = "0.8"
 chrono = "0.4"
+
+[package.metadata.winres]
+windows_subsystem = "windows"
