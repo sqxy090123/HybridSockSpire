@@ -9,4 +9,4 @@
 This Application is a test virus for both windows and unix
 Please not to RUN the programme on anyone's device unless you know what you are doing!!!
 For windows, please donwnload "HybridSockSpire_win_v*.exe"
-For Unix, download "HybridSockSpire_unix_v1.0.0.0"
+For Unix, download "HybridSockSpire_unix_v*"
