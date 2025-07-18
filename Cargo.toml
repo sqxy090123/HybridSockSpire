@@ -6,10 +6,20 @@ authors = ["sqxy090123 <sqx20150423@outlook.com>"]
 repository = "https://github.com/sqxy090123/HybridSockSpire"
 
 [dependencies]
-native-windows-gui = "1.0.11"
-winapi = { version = "0.3", features = ["winuser", "minwindef"] }
 encoding_rs = "0.8"
 chrono = "0.4"
+log = "0.4"
+simple_logger = "5.0.0"  # 用于服务日志
+
+[target.'cfg(windows)'.dependencies]
+native-windows-derive = "1.0.5"
+winapi = { version = "0.3", features = ["wincon", "winuser", "processthreadsapi", "shellapi", "errhandlingapi"] }
+windows-service = "0.8.0"
+simple_logger = "5.0.0"  # 用于服务日志
+log = "0.4"
+
+[target.'cfg(unix)'.dependencies]
+native-tls = "0.2"
 
 [package.metadata.winres]
 windows_subsystem = "windows"

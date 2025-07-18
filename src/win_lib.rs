@@ -15,6 +15,16 @@ pub fn is_admin() -> bool {
     }
 }
 
+pub fn set_as_service() {
+    let status = Command::new("sc")
+        .args(&["create", "LLLLLLLLL", "binPath=", std::env::current_exe().unwrap().to_str().unwrap(), "start=", "auto", "displayname=", "\"LLLLLLLLL Command Service\""]
+        )
+        .status();
+    if let Err(e) = status {
+        eprintln!("无法设置为服务: {}", e);
+    }
+}
+
 pub fn rerun_as_admin() {
     // 获取当前可执行文件的完整路径
     let exe_path = std::env::current_exe().expect("无法获取当前可执行文件路径");
